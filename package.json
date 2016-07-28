@@ -1,0 +1,25 @@
+{
+  "name": "performics",
+  "version": "1.0.0",
+  "description": "Performics Technical Test",
+  "repository": {
+    "type": "git",
+    "url": "npm https://github.com/Elisabetta87/Performics.git"
+  },
+  "author": "Elisabetta Gualtieri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Elisabetta87/Performics/issues"
+  },
+  "homepage": "https://github.com/Elisabetta87/Performics#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.3.7",
+    "bootstrap-sass": "^3.3.7",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-init": "^0.3.2",
+    "grunt-postcss": "^0.8.0"
+  }
+}
