@@ -1,6 +1,26 @@
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
-.elisa {
-  border-radius: 5px;
-  transition:all 2s;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#map {
+  height: 100%;
+}
+
+.custom-window-info{
+  background:yellow;
+}
+
+.gm-style-iw {
+
+  text-align: center;
+  width:300px;
+  + div {display: none;}
+
+  .content-info{
+
+  }
+
 }
