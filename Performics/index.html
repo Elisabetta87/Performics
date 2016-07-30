@@ -9,11 +9,21 @@
 </head>
 <body>
 
-    <div class="container"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 center-block">
+                <div id="map"></div>
+            </div>
+        </div>
 
+        <div id="overlayer" class="hidden">
+            <div class="progress-bar">
+                <span></span>
+            </div>
+        </div>
 
-    <h1>Title test</h1>
-    <div id="map"></div>
+    </div>
+
 
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous" ></script>
     <script src="performics.js" async></script>

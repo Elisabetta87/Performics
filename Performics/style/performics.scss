@@ -1,12 +1,30 @@
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+$gap:6px;
+
+.container, .container-fluid {
+  padding-left: $gap;
+  padding-right: $gap;
 }
+
+.row{
+  margin-left: -$gap;
+  margin-right: -$gap;
+}
+
+div[class^=col-]{
+  padding-left: $gap;
+  padding-right: $gap;
+}
+
+.center-block{
+  float: none;
+}
+
 #map {
-  height: 100%;
+  width: 100%;
+  height: 600px;
+  margin-top: 20px;
 }
 
 .custom-window-info{
@@ -20,7 +38,90 @@ html, body {
   + div {display: none;}
 
   .content-info{
+    h5{
+      margin: 0;
+      color: #0f9d49;
+    }
+    p{
+      margin: 0;
+    }
+  }
 
+}
+
+#overlayer{
+
+  position: absolute;
+  z-index: 100;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.6);
+
+  .progress-bar{
+    $progHeight:50px;
+    $borderWidth:2px;
+    width: 50%;
+    height: $progHeight;
+    position: absolute;
+    overflow: hidden;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 2px solid #666;
+    border-radius: 4px;
+
+    span{
+      display: block;
+      float: left;
+      width: 100%;
+      height: $progHeight - ($borderWidth*2);
+      background: rgba(195, 24, 94, 0.7);
+      margin-left: -100%;
+      transition: all 0.7s ease-out;
+    }
+  }
+}
+
+#controllerContainer {
+  width: 300px;
+
+  select.form-control:focus{
+    border-color: #ccc;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  h4 {
+    text-align: center;
+  }
+
+  #radiusRange {
+    margin-bottom: 10px;
+  }
+
+  button, button:active, button:active:hover{
+    outline: none;
+    width: 100%;
+  }
+
+  .reset-container {
+
+  }
+
+  .dist-container {
+
+    display: flex;
+    justify-content: space-between;
+
+    .range-value {
+      padding: 5px;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 3px;
+    }
   }
 
 }

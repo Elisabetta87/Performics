@@ -4150,14 +4150,29 @@ input[type="button"].btn-block {
     display: none !important;
   }
 }
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+.container, .container-fluid {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.row {
+  margin-left: -6px;
+  margin-right: -6px;
+}
+
+div[class^=col-] {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.center-block {
+  float: none;
 }
 
 #map {
-  height: 100%;
+  width: 100%;
+  height: 600px;
+  margin-top: 20px;
 }
 
 .custom-window-info {
@@ -4170,6 +4185,77 @@ html, body {
 }
 .gm-style-iw + div {
   display: none;
+}
+.gm-style-iw .content-info h5 {
+  margin: 0;
+  color: #0f9d49;
+}
+.gm-style-iw .content-info p {
+  margin: 0;
+}
+
+#overlayer {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+}
+#overlayer .progress-bar {
+  width: 50%;
+  height: 50px;
+  position: absolute;
+  overflow: hidden;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 2px solid #666;
+  border-radius: 4px;
+}
+#overlayer .progress-bar span {
+  display: block;
+  float: left;
+  width: 100%;
+  height: 46px;
+  background: rgba(195, 24, 94, 0.7);
+  margin-left: -100%;
+  transition: all 0.7s ease-out;
+}
+
+#controllerContainer {
+  width: 300px;
+}
+#controllerContainer select.form-control:focus {
+  border-color: #ccc;
+  outline: 0;
+  box-shadow: none;
+}
+#controllerContainer h4 {
+  text-align: center;
+}
+#controllerContainer #radiusRange {
+  margin-bottom: 10px;
+}
+#controllerContainer button, #controllerContainer button:active, #controllerContainer button:active:hover {
+  outline: none;
+  width: 100%;
+}
+#controllerContainer .dist-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+#controllerContainer .dist-container .range-value {
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
 }
 
 /*# sourceMappingURL=performics.css.map */
